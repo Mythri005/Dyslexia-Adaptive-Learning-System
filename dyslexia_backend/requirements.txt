@@ -12,6 +12,8 @@ opencv-python
 mediapipe
 
 requests
+beautifulsoup4
+
 python-dotenv
 
 SQLAlchemy
@@ -19,3 +21,6 @@ Werkzeug
 Jinja2
 
 pyttsx3
+SpeechRecognition
+pydub
+soundfile
