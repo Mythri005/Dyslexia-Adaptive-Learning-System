@@ -1,0 +1,274 @@
+.missing-letters {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.help-banner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  animation: bounce 0.5s ease;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.question-header h2 {
+  color: #f093fb;
+  margin: 0;
+}
+
+.difficulty-badge {
+  background: #f093fb;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.instruction {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.instruction p {
+  color: #666;
+  font-size: 16px;
+}
+
+.word-pattern {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.pattern-letter {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 15px;
+  background: rgba(240, 147, 251, 0.1);
+  border-radius: 10px;
+  min-width: 50px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pattern-letter.missing {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  border: 2px dashed #ff6b6b;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.letter-input {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #e0e7ff;
+  border-radius: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.letter-input:focus {
+  outline: none;
+  border-color: #f093fb;
+  transform: scale(1.05);
+}
+
+.letter-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.submit-btn {
+  min-width: 200px;
+}
+
+.feedback {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: slideUp 0.5s ease;
+}
+
+.feedback.correct {
+  background: rgba(76, 175, 80, 0.1);
+  border: 2px solid #4CAF50;
+}
+
+.feedback.incorrect {
+  background: rgba(244, 67, 54, 0.1);
+  border: 2px solid #F44336;
+}
+
+.feedback-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feedback-message {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.complete-word {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.points-earned {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f093fb;
+  margin-top: 10px;
+}
+
+.attempts-remaining {
+  color: #ff9800;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.word-celebration {
+  text-align: center;
+  margin-top: 20px;
+  animation: bounce 0.5s ease;
+}
+
+.complete-word-display {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.celebrated-letter {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-radius: 8px;
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .word-pattern {
+    gap: 5px;
+  }
+  
+  .pattern-letter {
+    font-size: 20px;
+    padding: 10px;
+    min-width: 40px;
+  }
+  
+  .letter-input {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .feedback-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.correct-letter {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stress-help {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.stress-message {
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 5px;
+}
+
+.stress-tip {
+  color: #666;
+  font-size: 14px;
+}
+
+.complete-word-hint {
+  background: rgba(76, 175, 80, 0.1);
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.complete-word-hint strong {
+  color: #4CAF50;
+}
+
+}

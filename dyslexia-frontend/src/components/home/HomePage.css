@@ -1,0 +1,333 @@
+/* dyslexia-frontend/src/components/home/HomePage.css */
+
+/* ─── FULL SCREEN TAKEOVER ───
+   Covers the global <Header> rendered by App.js
+   without touching any other page/module */
+.home-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+/* ─── NAVBAR ─── */
+.nav {
+  height: 62px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #3d2fa0 0%, #6c47d2 60%, #9b5de5 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-buttons {
+  flex-shrink: 0;
+}
+
+.nav-btn {
+  padding: 8px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border: none;
+}
+
+.nav-btn.primary {
+  background: white;
+  color: #4f46e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn.primary:hover {
+  background: #f5f3ff;
+  transform: translateY(-1px);
+}
+
+/* ─── HERO SECTION — fills all remaining height ─── */
+.hero-section {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #6b63d9 0%, #7c5cbf 40%, #9b59c4 70%, #a855b5 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -80px;
+  left: -100px;
+  width: 650px;
+  height: 550px;
+  background: radial-gradient(ellipse at center, rgba(190, 170, 255, 0.4) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── LEFT COLUMN ─── */
+.hero-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.highlight-dyslexia {
+  font-style: italic;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 460px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.btn-primary {
+  padding: 12px 26px;
+  background: white;
+  color: #4f46e5;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+  background: #f5f3ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #ec4899, #f97316);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.35);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.45);
+}
+
+/* ─── RIGHT COLUMN ─── */
+.modules-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modules-wrapper {
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.module-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.module-card:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.module-icon {
+  font-size: 2rem;
+  min-width: 48px;
+  text-align: center;
+  line-height: 1;
+}
+
+.module-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+}
+
+.module-content p {
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .home-page {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .modules-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

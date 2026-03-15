@@ -1,0 +1,226 @@
+.math-question {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.help-banner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  animation: bounce 0.5s ease;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.question-header h2 {
+  color: #667eea;
+  margin: 0;
+}
+
+.difficulty-badge {
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.question-content {
+  text-align: center;
+}
+
+.question-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 10px;
+  line-height: 1.4;
+}
+
+.question-hint {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.answer-section {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-input {
+  flex: 1;
+  max-width: 200px;
+  padding: 15px;
+  border: 2px solid #e0e7ff;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.answer-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.submit-btn {
+  min-width: 150px;
+}
+
+.feedback {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: slideUp 0.5s ease;
+}
+
+.feedback.correct {
+  background: rgba(76, 175, 80, 0.1);
+  border: 2px solid #4CAF50;
+}
+
+.feedback.incorrect {
+  background: rgba(244, 67, 54, 0.1);
+  border: 2px solid #F44336;
+}
+
+.feedback-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feedback-message {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.correct-answer {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.points-earned {
+  font-size: 18px;
+  font-weight: bold;
+  color: #667eea;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .answer-section {
+    flex-direction: column;
+  }
+  
+  .answer-input {
+    max-width: 100%;
+  }
+  
+  .submit-btn {
+    width: 100%;
+  }
+  
+  .question-text {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  /* Add these styles to your existing MathQuestion.css */
+
+.question-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hear-btn.small {
+  min-width: auto;
+  padding: 8px 12px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.feedback-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.stress-alert {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.stress-message {
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 5px;
+}
+
+.stress-tip {
+  color: #666;
+  font-size: 14px;
+}
+
+.celebration-animation {
+  animation: bounce 0.6s ease;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-top: 10px;
+}
+
+/* Ensure answer input is focused for better UX */
+.answer-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.stress-help {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+}

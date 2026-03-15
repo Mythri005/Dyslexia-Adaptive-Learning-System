@@ -1,0 +1,46 @@
+.camera-feed {
+  margin: 20px 0;
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.camera-video {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ❤️ CLEAN PULSE UI ONLY */
+.pulse-only-display {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+
+  background: rgba(0, 0, 0, 0.7); /* fallback if blur unsupported */
+  
+  -webkit-backdrop-filter: blur(6px); /* Safari / iOS support */
+  backdrop-filter: blur(6px); /* Modern browsers */
+
+  color: white;
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .camera-video {
+    height: 250px;
+  }
+}

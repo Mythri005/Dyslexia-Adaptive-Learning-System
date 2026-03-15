@@ -1,0 +1,293 @@
+.sentence-reading {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.help-banner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  animation: bounce 0.5s ease;
+}
+
+.reading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.reading-header h2 {
+  color: #4facfe;
+  margin: 0;
+}
+
+.difficulty-badge {
+  background: #4facfe;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.instruction {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.instruction p {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sentence-section {
+  margin: 30px 0;
+  padding: 25px;
+  background: rgba(79, 172, 254, 0.1);
+  border-radius: 15px;
+  border: 2px solid #4facfe;
+}
+
+.sentence-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.sentence-word {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  background: white;
+  border: 2px solid transparent;
+}
+
+.sentence-word.completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+  border-color: #4CAF50;
+}
+
+.sentence-word.current {
+  background: #4facfe;
+  color: white;
+  transform: scale(1.1);
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.current-word-section {
+  text-align: center;
+  margin: 25px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.current-word-display {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.word-context {
+  font-size: 16px;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.navigation-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 2px solid #e0e7ff;
+}
+
+.nav-btn {
+  min-width: 140px;
+  background: rgba(79, 172, 254, 0.2);
+  color: #4facfe;
+  border: 2px solid #4facfe;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: #4facfe;
+  color: white;
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.word-progress {
+  font-weight: bold;
+  color: #4facfe;
+  font-size: 16px;
+}
+
+.audio-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.audio-controls .btn {
+  min-width: 160px;
+}
+
+.hear-btn {
+  background: rgba(79, 172, 254, 0.2);
+  color: #4facfe;
+  border: 2px solid #4facfe;
+}
+
+.hear-btn:hover {
+  background: #4facfe;
+  color: white;
+}
+
+.slow-btn {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ff9800;
+  border: 2px solid #ff9800;
+}
+
+.slow-btn:hover {
+  background: #ff9800;
+  color: white;
+}
+
+.practice-guide {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid #ffc107;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 25px 0;
+}
+
+.practice-guide h4 {
+  color: #ff9800;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.strategy-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.strategy-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+}
+
+.step-icon {
+  width: 30px;
+  height: 30px;
+  background: #ff9800;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.step-text {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .sentence-display {
+    gap: 5px;
+  }
+  
+  .sentence-word {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  
+  .navigation-controls {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .audio-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .audio-controls .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .strategy-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .current-word-display {
+    font-size: 28px;
+  }
+}
+
+.full-highlight {
+  background: #eef6ff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.sentence-display {
+  background: #eaf4ff;        /* Light highlight background */
+  border: 2px solid #4a90e2;  /* Blue border highlight */
+  border-radius: 14px;
+  padding: 18px 24px;
+  margin: 15px 0;
+
+  font-size: 22px;            /* Bigger font */
+  font-weight: 700;           /* Bold */
+  color: #1a1a1a;             /* Dark readable text */
+
+  line-height: 1.8;
+  text-align: center;
+}

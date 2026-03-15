@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+@media print {
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header,
+  nav,
+  footer,
+  .top-bar,
+  .dashboard-header,
+  .logout-btn,
+  .view-progress-btn {
+    display: none !important;
+  }
+
+  /* Hide everything first */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Show Math */
+  .math-results,
+  .math-results * {
+    visibility: visible !important;
+  }
+
+  /* Show Spelling */
+  .report-page,
+  .report-page * {
+    visibility: visible !important;
+  }
+
+  /* Show Reading */
+  .reading-results,
+  .reading-results * {
+    visibility: visible !important;
+  }
+
+  /* Layout printable sections */
+  .math-results,
+  .report-page,
+  .reading-results {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    background: white !important;
+    padding: 20px !important;
+  }
+
+  body {
+    background: white !important;
+  }
+}

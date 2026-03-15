@@ -1,0 +1,334 @@
+.complete-words {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.help-banner {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  animation: bounce 0.5s ease;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.question-header h2 {
+  color: #f093fb;
+  margin: 0;
+}
+
+.difficulty-badge {
+  background: #f093fb;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.instruction {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.instruction p {
+  color: #666;
+  font-size: 16px;
+}
+
+.word-audio-prompt {
+  text-align: center;
+  margin: 30px 0;
+  padding: 25px;
+  background: rgba(240, 147, 251, 0.1);
+  border-radius: 15px;
+}
+
+.word-to-spell {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f093fb;
+  margin-bottom: 15px;
+  text-transform: lowercase;
+}
+
+.hear-again-btn {
+  background: rgba(240, 147, 251, 0.2);
+  color: #f093fb;
+  border: 2px solid #f093fb;
+}
+
+.hear-again-btn:hover {
+  background: #f093fb;
+  color: white;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+}
+
+.word-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px 20px;
+  border: 3px solid #e0e7ff;
+  border-radius: 15px;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+}
+
+.word-input:focus {
+  outline: none;
+  border-color: #f093fb;
+  transform: scale(1.02);
+}
+
+.word-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.submit-btn {
+  min-width: 150px;
+}
+
+.hint-btn {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ff9800;
+  border: 2px solid #ff9800;
+  min-width: 120px;
+}
+
+.hint-btn:hover {
+  background: #ff9800;
+  color: white;
+}
+
+.word-hint {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid #ff9800;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  animation: slideUp 0.5s ease;
+}
+
+.hint-title {
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.letter-by-letter {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hint-letter {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 15px;
+  background: white;
+  border: 2px solid #ff9800;
+  border-radius: 8px;
+  min-width: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: slideUp 0.5s ease;
+}
+
+.feedback.correct {
+  background: rgba(76, 175, 80, 0.1);
+  border: 2px solid #4CAF50;
+}
+
+.feedback.incorrect {
+  background: rgba(244, 67, 54, 0.1);
+  border: 2px solid #F44336;
+}
+
+.feedback-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feedback-message {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.correct-spelling {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.points-earned {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f093fb;
+  margin-top: 10px;
+}
+
+.attempts-remaining {
+  color: #ff9800;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.spelling-celebration {
+  text-align: center;
+  margin-top: 20px;
+  animation: bounce 0.5s ease;
+}
+
+.correct-word-display {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.celebrated-letter {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-radius: 10px;
+  animation: popIn 0.3s ease;
+}
+
+.celebration-message {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-top: 10px;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .word-to-spell {
+    font-size: 22px;
+  }
+  
+  .word-input {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .action-buttons .btn {
+    width: 100%;
+  }
+  
+  .letter-by-letter {
+    gap: 5px;
+  }
+  
+  .hint-letter {
+    font-size: 16px;
+    padding: 8px 12px;
+    min-width: 35px;
+  }
+
+  .audio-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feedback-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.stress-help {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.stress-message {
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 5px;
+}
+
+.stress-tip {
+  color: #666;
+  font-size: 14px;
+}
+
+}
+

@@ -1,0 +1,28 @@
+.page-container {
+  min-height: 100vh;
+  padding: 60px;
+  background: linear-gradient(135deg,#1a1f3c,#5a2ea6);
+  color: white;
+}
+
+.back-btn {
+  background: #6366f1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.page-content {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}

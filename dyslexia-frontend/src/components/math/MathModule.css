@@ -1,0 +1,426 @@
+.math-module {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.math-module.loading {
+  text-align: center;
+  padding: 50px;
+}
+
+.loading-spinner {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { 
+    transform: translateY(0); 
+  }
+  40% { 
+    transform: translateY(-10px); 
+  }
+  60% { 
+    transform: translateY(-5px); 
+  }
+}
+
+.math-module.loading h2 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.module-header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.module-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.module-header p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.session-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.session-info span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.module-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Camera feed adjustments for math module */
+.math-module .camera-container {
+  max-width: 100%;
+}
+
+.math-module .camera-video {
+  height: 250px;
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .module-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .question-section {
+    order: 2;
+  }
+  
+  .math-module .camera-container {
+    order: 1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .math-module {
+    padding: 10px;
+  }
+  
+  .module-header {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .module-header h1 {
+    font-size: 24px;
+  }
+  
+  .module-header p {
+    font-size: 16px;
+  }
+  
+  .session-info {
+    gap: 15px;
+  }
+  
+  .session-info span {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .math-module .camera-container {
+    max-width: 100%;
+  }
+  
+  .math-module .camera-video {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-header {
+    padding: 15px;
+  }
+  
+  .module-header h1 {
+    font-size: 20px;
+  }
+  
+  .session-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .session-info span {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Animation for module transitions */
+.module-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.module-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.module-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.module-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Special math-themed decorations */
+.math-decoration {
+  position: relative;
+}
+
+.math-decoration::before {
+  content: "➕";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 24px;
+  opacity: 0.1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.math-decoration::after {
+  content: "✖️";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  font-size: 24px;
+  opacity: 0.1;
+  animation: float 3s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Progress indicator for math questions */
+.math-progress {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  transition: all 0.3s ease;
+}
+
+.progress-dot.active {
+  background: #667eea;
+  transform: scale(1.2);
+}
+
+.progress-dot.completed {
+  background: #4CAF50;
+}
+
+/* Math-specific feedback animations */
+.math-feedback {
+  position: relative;
+  overflow: hidden;
+}
+
+.math-feedback::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  animation: progressFill 2s ease-in-out;
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Celebration for correct answers */
+.math-celebration {
+  position: relative;
+}
+
+.math-celebration::after {
+  content: "🎉";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 24px;
+  animation: celebration 0.6s ease-out;
+}
+
+@keyframes celebration {
+  0% {
+    transform: scale(0.1) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Stress indicator styles */
+.stress-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(244, 67, 54, 0.9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  z-index: 100;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Help overlay styles */
+.help-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.help-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Reward animation */
+.reward-animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  z-index: 1000;
+  animation: bounce 1s ease;
+}
+
+/* Error state styling */
+.error-state {
+  background: rgba(244, 67, 54, 0.1);
+  border: 2px solid #f44336;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.error-state h3 {
+  color: #f44336;
+  margin-bottom: 10px;
+}
+
+/* Success state styling */
+.success-state {
+  background: rgba(76, 175, 80, 0.1);
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.success-state h3 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+
+  .no-question {
+  text-align: center;
+  padding: 40px;
+  background: rgba(102, 126, 234, 0.1);
+  border: 2px dashed #667eea;
+}
+
+.no-question h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.no-question p {
+  color: #666;
+}
+}

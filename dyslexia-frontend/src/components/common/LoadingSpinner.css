@@ -1,0 +1,75 @@
+.loading-spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.loading-spinner-container.small {
+  padding: 20px;
+}
+
+.loading-spinner-container.large {
+  padding: 60px;
+}
+
+.spinner {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.spinner-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #667eea;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.spinner-circle:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-circle:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.spinner-circle:nth-child(3) {
+  animation-delay: 0s;
+}
+
+.loading-message {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.loading-spinner-container.small .spinner-circle {
+  width: 8px;
+  height: 8px;
+}
+
+.loading-spinner-container.small .loading-message {
+  font-size: 14px;
+}
+
+.loading-spinner-container.large .spinner-circle {
+  width: 16px;
+  height: 16px;
+}
+
+.loading-spinner-container.large .loading-message {
+  font-size: 18px;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 40% { 
+    transform: scale(1.0);
+  }
+}
