@@ -17,3 +17,5 @@ python-dotenv
 SQLAlchemy
 Werkzeug
 Jinja2
+
+pyttsx3
