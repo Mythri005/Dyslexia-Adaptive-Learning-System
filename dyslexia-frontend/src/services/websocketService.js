@@ -262,7 +262,7 @@ class WebSocketService {
 const webSocketService = new WebSocketService();
 
 // Default connection URL (can be overridden)
-const DEFAULT_WS_URL = 'ws://localhost:5001/ws';
+const DEFAULT_WS_URL = 'wss://ai-powered-adaptive-learning-system-i87g.onrender.com/ws';
 
 // Export both the class and singleton instance
 export { WebSocketService };
