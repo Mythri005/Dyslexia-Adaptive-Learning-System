@@ -16,11 +16,7 @@ def create_app(config_name='default'):
     db.init_app(app)
     
     # FIX CORS - Allow all origins during development
-    CORS(app, origins=[
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://dyslexia-adaptive-learning-system.vercel.app"
-])
+    CORS(app)
     
     # Or for development, you can allow all origins:
     # CORS(app)  # This allows all origins (use only for development)
