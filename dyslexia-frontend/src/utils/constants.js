@@ -73,7 +73,7 @@ export const VOICE_SETTINGS = {
 };
 
 export const API_ENDPOINTS = {
-  BASE_URL: 'http://localhost:5001/api',
+  BASE_URL: 'https://ai-powered-adaptive-learning-system-i87g.onrender.com/api',
   HEALTH: '/health',
   USERS: '/users',
   MATH: {
