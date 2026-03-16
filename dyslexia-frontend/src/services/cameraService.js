@@ -64,7 +64,7 @@ class CameraService {
       const imageData = this.captureFrame();
       if (!imageData) return this.getDefaultAnalysis();
 
-      const response = await fetch('http://localhost:5001/api/camera/analyze', {
+      const response = await fetch('https://ai-powered-adaptive-learning-system-i87g.onrender.com/api/camera/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
